@@ -31,3 +31,7 @@ yarn-debug.log*
 .yarn-integrity
 
 /vendor/bundle
+
+# Ignore OS created files
+.DS_Store
+._*
