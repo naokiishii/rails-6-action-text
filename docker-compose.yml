@@ -6,17 +6,20 @@ services:
       - postgresql_data:/var/lib/postgresql/data
   web:
     image: diveintohacking/docker-compose-rails-6:0.0.4
-    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
+    # command: bash -c "rm -f tmp/pids/server.pid && bundle exec rails s -p 3000 -b '0.0.0.0'"
     volumes:
       - .:/app
     environment:
       - BUNDLE_PATH=/app/vendor/bundle
     ports:
       - "3000:3000"
+      - '1234:1234'
+      - '26162:26162'
     depends_on:
       - db
     stdin_open: true
     tty: true
+    command: bash -c "rm -f tmp/pids/server.pid && bundle exec rdebug-ide --host 0.0.0.0 --port 1234 --dispatcher-port 26162 -- bin/rails s -p 3000 -b '0.0.0.0'"
 
 volumes:
   postgresql_data:

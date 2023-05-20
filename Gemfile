@@ -33,6 +33,10 @@ group :development, :test do
   # gem 'pry'
   gem 'pry-rails'
   gem 'pry-byebug'
+
+  # visual studio debug
+  gem 'ruby-debug-ide'
+  gem 'debase'
 end
 
 group :development do
