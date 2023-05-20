@@ -64,6 +64,9 @@ GEM
     coderay (1.1.2)
     concurrent-ruby (1.1.5)
     crass (1.0.5)
+    debase (0.2.4.1)
+      debase-ruby_core_source (>= 0.10.2)
+    debase-ruby_core_source (3.2.0)
     erubi (1.8.0)
     ffi (1.11.1)
     globalid (0.4.2)
@@ -143,6 +146,8 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
+    ruby-debug-ide (0.7.3)
+      rake (>= 0.8.1)
     ruby-vips (2.0.17)
       ffi (~> 1.9)
     ruby_dep (1.5.0)
@@ -189,6 +194,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap (>= 1.4.2)
   byebug
+  debase
   image_processing (~> 1.2)
   jbuilder (~> 2.7)
   listen (>= 3.0.5, < 3.2)
@@ -197,6 +203,7 @@ DEPENDENCIES
   pry-rails
   puma (~> 3.12)
   rails (~> 6.0.0)
+  ruby-debug-ide
   sass-rails (~> 5)
   tzinfo-data
   web-console (>= 3.3.0)
